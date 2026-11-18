@@ -10,7 +10,7 @@
 ![Git](https://img.shields.io/badge/Git-ramas%20%2B%20PRs-F05032?logo=git&logoColor=white)
 ![2º DAW](https://img.shields.io/badge/2%C2%BA%20DAW-M%C3%B3dulo%20Optativo-8A2BE2)
 
-[Cómo jugar](#-cómo-jugar) · [Reglas](#-reglas) · [Cómo está hecho](#-cómo-está-hecho) · [Cómo trabajamos](#-cómo-trabajamos-con-git) · [Equipo](#-equipo)
+[Cómo jugar](#-cómo-jugar) · [Funcionalidades](#-funcionalidades) · [Reglas](#-reglas) · [Cómo está hecho](#-cómo-está-hecho) · [Cómo trabajamos](#-cómo-trabajamos-con-git) · [Equipo](#-equipo)
 
 </div>
 
@@ -50,6 +50,19 @@ El crupier se ha pasado de 21. ¡Ganas!
 ```
 
 > 💡 En esta partida el **A♦** del crupier vale **1**: con 11 se habría pasado de 21.
+
+---
+
+## ✨ Funcionalidades
+
+- 🂠 **Baraja completa**: 52 cartas que se barajan al azar en cada partida.
+- 🤲 **Reparto inicial**: 2 cartas para el jugador y 2 para la banca, con una de la banca boca abajo.
+- 🔢 **Puntuación automática**: las figuras valen 10 y el As vale 11 o 1, según convenga.
+- 🙋 **Turno del jugador**: pide carta (`p`) o se planta (`s`). Si escribe otra cosa, el juego se lo vuelve a preguntar.
+- 💥 **Control de 21**: si el jugador se pasa, pierde en el acto.
+- 🏦 **Turno de la banca**: pide carta automáticamente hasta llegar a 17.
+- 🏆 **Ganador**: victoria, derrota o empate, con los puntos de cada uno.
+- 🔁 **Varias partidas** seguidas sin salir del programa.
 
 ---
 
