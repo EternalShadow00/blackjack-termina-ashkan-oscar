@@ -1,16 +1,6 @@
 <div align="center">
 
-```
- ┌─────────┐ ┌─────────┐
- │A        │ │K        │
- │         │ │         │
- │    ♠    │ │    ♥    │   ██████╗ ██╗      █████╗  ██████╗██╗  ██╗     ██╗ █████╗  ██████╗██╗  ██╗
- │         │ │         │   ██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝     ██║██╔══██╗██╔════╝██║ ██╔╝
- │        A│ │        K│   ██████╔╝██║     ███████║██║     █████╔╝      ██║███████║██║     █████╔╝
- └─────────┘ └─────────┘   ██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██   ██║██╔══██║██║     ██╔═██╗
-                           ██████╔╝███████╗██║  ██║╚██████╗██║  ██╗╚█████╔╝██║  ██║╚██████╗██║  ██╗
-     A + K  =  21          ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
-```
+<img src="docs/img/banner.svg" alt="Blackjack en la terminal" width="100%">
 
 ### Blackjack en la terminal, escrito en Python y hecho a cuatro manos con Git y GitHub
 
@@ -106,30 +96,7 @@ Una **carta** es una tupla `(valor, palo)`, por ejemplo `("A", "♠")`, y una **
 
 Cada tarea es una **Issue**, se programa en su propia rama `feature/...` y entra en `main` mediante una **Pull Request** que revisa el compañero. La rama `main` está **protegida**: nadie puede subir nada directamente, y cada PR necesita **1 aprobación**.
 
-```mermaid
-gitGraph
-    commit id: "Initial commit"
-    branch feature/baraja
-    commit id: "crear_baraja (#1)"
-    commit id: "barajar y repartir (#1)"
-    checkout main
-    merge feature/baraja id: "PR #6"
-    branch feature/mano
-    commit id: "calcular_puntos (#2)"
-    checkout main
-    merge feature/mano
-    branch feature/turno-jugador
-    commit id: "turno del jugador (#3)"
-    checkout main
-    branch feature/turno-crupier
-    commit id: "turno del crupier (#4)"
-    checkout main
-    merge feature/turno-jugador id: "PR #7"
-    checkout feature/turno-crupier
-    merge main id: "conflicto resuelto"
-    checkout main
-    merge feature/turno-crupier
-```
+<p align="center"><img src="docs/img/flujo-git.svg" alt="Flujo de ramas: cada feature entra en main por una Pull Request" width="100%"></p>
 
 | # | Issue | Rama |
 |:-:|---|---|
