@@ -26,3 +26,20 @@ def calcular_puntos(mano):
         ases -= 1
 
     return puntos
+
+
+
+def mostrar_mano(mano):
+    """Devuelve la mano como texto, por ejemplo: A♠ 10♥ (21)."""
+    cartas = " ".join(valor + palo for valor, palo in mano)
+    return cartas + " (" + str(calcular_puntos(mano)) + ")"
+
+
+# Prueba rápida: solo se ejecuta con "python mano.py"
+if __name__ == "__main__":
+    import sys
+    sys.stdout.reconfigure(encoding="utf-8")  # para que se vean ♠ ♥ ♦ ♣ en Windows
+
+    print(mostrar_mano([("A", "♠"), ("K", "♥")]))              # A♠ K♥ (21)
+    print(mostrar_mano([("A", "♠"), ("A", "♥"), ("9", "♦")]))  # A♠ A♥ 9♦ (21)
+    print(mostrar_mano([("K", "♣"), ("Q", "♦"), ("5", "♠")]))  # K♣ Q♦ 5♠ (25)
