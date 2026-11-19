@@ -39,6 +39,28 @@ def turno_jugador(baraja, jugador):
 
     return calcular_puntos(jugador)
 
+def turno_crupier(baraja, crupier):
+    """El crupier enseña su mano y pide carta mientras tenga menos de 17."""
+    print("Mano del crupier:", mostrar_mano(crupier))
+    while calcular_puntos(crupier) < 17:
+        carta = repartir(baraja)
+        crupier.append(carta)
+        print("El crupier pide y le sale:", carta[0] + carta[1])
+        print("Mano del crupier:", mostrar_mano(crupier))
+    return calcular_puntos(crupier)
+
+
+def decidir_ganador(puntos_jugador, puntos_crupier):
+    """Compara los puntos y dice quién gana."""
+    if puntos_crupier > 21:
+        print("El crupier se ha pasado de 21. ¡Ganas!")
+    elif puntos_jugador > puntos_crupier:
+        print("¡Ganas!", puntos_jugador, "a", puntos_crupier)
+    elif puntos_jugador < puntos_crupier:
+        print("Pierdes.", puntos_jugador, "a", puntos_crupier)
+    else:
+        print("Empate a", puntos_jugador)
+
 
 def jugar_partida():
     """Juega una partida completa."""
@@ -58,9 +80,10 @@ def jugar_partida():
         print("Pierdes. Gana el crupier.")
         return
 
-    # --- Turno del crupier y resultado: lo programa Óscar (issue #4) ---
-    print("Mano del crupier:", mostrar_mano(crupier))
-    print("(Falta el turno del crupier: issue #4)")
+      # --- Turno del crupier y resultado: Óscar (issue #4) ---
+    puntos_crupier = turno_crupier(baraja, crupier)
+    decidir_ganador(puntos_jugador, puntos_crupier)
+
 
 
 def main():
