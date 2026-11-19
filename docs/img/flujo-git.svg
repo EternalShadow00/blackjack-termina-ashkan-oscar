@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" role="img" aria-label="Flujo de ramas del proyecto">
+  <rect width="800" height="320" rx="14" fill="#0f1a15"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+
+    <!-- nombres de las ramas -->
+    <g font-size="13" font-weight="600" font-family="Consolas, Menlo, monospace">
+      <text x="24" y="54" fill="#e6edf3">main</text>
+      <text x="24" y="104" fill="#3fb950">feature/baraja</text>
+      <text x="24" y="149" fill="#f778ba">feature/mano</text>
+      <text x="24" y="194" fill="#58a6ff">feature/turno-jugador</text>
+      <text x="24" y="239" fill="#e0b84f">feature/turno-crupier</text>
+    </g>
+
+    <!-- líneas -->
+    <g fill="none" stroke-width="4" stroke-linecap="round">
+      <path d="M210 50 L730 50" stroke="#e6edf3"/>
+      <path d="M210 50 C240 50 240 100 270 100 L320 100 C350 100 350 50 380 50" stroke="#3fb950"/>
+      <path d="M380 50 C410 50 410 145 440 145 C470 145 470 50 500 50" stroke="#f778ba"/>
+      <path d="M210 50 C232 50 232 190 262 190 L590 190 C615 190 615 50 620 50" stroke="#58a6ff"/>
+      <path d="M500 50 C525 50 525 235 550 235 L665 235 C695 235 695 50 730 50" stroke="#e0b84f"/>
+      <path d="M620 50 C645 50 645 235 665 235" stroke="#e6edf3" stroke-dasharray="6 6"/>
+    </g>
+
+    <!-- commits -->
+    <g stroke="#0f1a15" stroke-width="3">
+      <circle cx="210" cy="50" r="9" fill="#e6edf3"/>
+      <circle cx="270" cy="100" r="8" fill="#3fb950"/>
+      <circle cx="320" cy="100" r="8" fill="#3fb950"/>
+      <circle cx="440" cy="145" r="8" fill="#f778ba"/>
+      <circle cx="330" cy="190" r="8" fill="#58a6ff"/>
+      <circle cx="550" cy="235" r="8" fill="#e0b84f"/>
+      <circle cx="380" cy="50" r="10" fill="#3fb950"/>
+      <circle cx="500" cy="50" r="10" fill="#f778ba"/>
+      <circle cx="620" cy="50" r="10" fill="#58a6ff"/>
+      <circle cx="665" cy="235" r="10" fill="#e5534b"/>
+      <circle cx="730" cy="50" r="10" fill="#e0b84f"/>
+    </g>
+
+    <!-- etiquetas -->
+    <g font-size="11" fill="#9fb3a8" text-anchor="middle">
+      <text x="210" y="30">inicio</text>
+      <text x="380" y="30">PR baraja</text>
+      <text x="500" y="30">PR mano</text>
+      <text x="620" y="30">PR jugador</text>
+      <text x="730" y="30">PR crupier</text>
+      <text x="295" y="124">#1 · 2 commits</text>
+      <text x="440" y="169">#2</text>
+      <text x="330" y="214">#3</text>
+      <text x="550" y="259">#4</text>
+      <text x="665" y="262" fill="#ff8a80" font-weight="700">conflicto resuelto</text>
+    </g>
+
+    <text x="24" y="288" font-size="12.5" fill="#cfe8d6">Cada rama entra en <tspan font-family="Consolas, Menlo, monospace" fill="#e6edf3">main</tspan> por una Pull Request revisada por el compañero.</text>
+    <text x="24" y="306" font-size="12.5" fill="#cfe8d6">La línea discontinua es el <tspan font-family="Consolas, Menlo, monospace" fill="#e6edf3">git merge main</tspan> que provoca el conflicto en <tspan font-family="Consolas, Menlo, monospace" fill="#e6edf3">main.py</tspan>.</text>
+  </g>
+</svg>
